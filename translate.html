@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Летающая мышь</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #111;
+    }
+
+    .bat {
+      position: absolute;
+      top: 40%;
+      left: -100px;
+      width: 80px;
+      height: 40px;
+      background: url('https://i.imgur.com/VYBfEb1.png') no-repeat center / contain;
+      animation: flyRight 10s linear infinite;
+    }
+
+    @keyframes flyRight {
+      0% { left: -100px; transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { left: 100vw; transform: translateY(0); }
+    }
+    @keyframes flyRight {
+  0% { 
+    left: -100px;                 /* Мышь стартует за пределами левого края экрана */
+    transform: translateY(0);     /* Начальное вертикальное положение */
+  }
+  50% { 
+    transform: translateY(-20px); /* Немного поднимается в середине полёта */
+  }
+  100% { 
+    left: 100vw;                  /* Долетает до правого края экрана */
+    transform: translateY(0);     /* Возвращается на исходную высоту */
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="bat"></div>
+
+</body>
+</html>
